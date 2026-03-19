@@ -1,106 +1,137 @@
-# structural-intelligence
-
-**Structural Intelligence Portfolio — Yasuyuki Sakane**
-
-A multilingual interactive portfolio that visualizes the cognitive architecture, intellectual foundations, and original frameworks developed over 26 years — and the structural gap between how the world perceives this work and what it actually is.
-
-Live: [pages.sakane.dev/structural-intelligence](https://pages.sakane.dev/structural-intelligence)
-
----
+# Structural Intelligence — Interactive Infographic
 
 ## English
 
-### What this is
+### Overview
 
-This is not a resume. It is the first public externalization of frameworks and ideas that have been building privately for 26 years.
+A multilingual interactive portfolio that visualizes the cognitive architecture, intellectual foundations, and original frameworks developed over 26 years — and the structural gap between how the world perceives this work and what it actually is.
 
-The core is an interactive structural map with four layers:
+### Key Features
 
-| Layer | Label | What it represents |
-|---|---|---|
-| 1 | AS IS | How the market perceives Sakane — Security Specialist, Tech Risk Advisor, Project Manager |
-| 2 | Hidden Substrate | The intellectual foundations invisible from outside — cognitive science, physics, history, behavioral economics, 26 years of deep tech reality |
-| 3 | Transformation Engine | THE VOID — the structural gap between perception and reality — and the contradictions it generates |
-| 4 | To Be | What emerges when the gap is resolved — Structural Architect, Chief Decision Architect, CSVFO |
+  - Interactive SVG Map: Click 13 nodes to explore each element's meaning, correlations, and timeline.
+  - Language Toggle: Instant language switching via the top-right button.
+  - AI Chat Assistant: Gemini API-powered Q\&A chatbot about Yasuyuki Sakane.
+  - Static RAG: Dynamically retrieves relevant chunks from the knowledge base to answer questions.
+  - Responsive Design: Mobile and desktop compatible.
 
-Clicking each node reveals the timeline (past → present → future) and causal relationships between nodes.
+### About the AI Assistant and API Key
 
-The portfolio includes an RAG-powered AI assistant (Gemini API) that answers questions about Sakane's career, frameworks, and philosophy — grounded in a curated knowledge base, not hallucination.
+This portfolio incorporates a RAG-based AI assistant that allows you to deeply explore the background of my career and philosophy using natural language.
+To use this interactive feature, you will need your own Google Gemini API key. It works seamlessly with the free tier API key.
 
-### Frameworks
+Privacy and Security:
+The API key you enter is stored exclusively in your browser's local storage. It is used solely to call the Google Gemini API directly from the client side. Neither the key nor your conversation history is ever transmitted to or stored on any external servers or databases, including mine.
 
-- **Structural Intelligence (構造知性)** — The methodology of reading and redesigning the causal structures underlying organizational dysfunction
-- **EMVIS** — Enterprise Meta-Visibility System. AI-driven architecture for resolving Japan market entry PoC Trap
-- **CCBR** — Cyber Security Background Radiation Theory. Next-generation cybersecurity framework inspired by cosmic microwave background radiation
-- **ESI** — Executive Strategic Intelligence. Extended cognitive architecture for structural decision-making in the non-linear era
-- **CSVFO** — Chief Structural Value and Future Officer. A conceptual role that fills the structural blank zones no existing CxO covers
+If you choose to skip entering an API key, you can still access all core features, including the structural map and all content, without any restrictions.
 
-### Technology
+Setup Instructions:
 
-- Vanilla HTML/CSS/JS — single file, zero dependencies, zero build step
-- RAG implementation: keyword-based semantic retrieval (`knowledge.js`) + Gemini API
-- 5 languages: Japanese, English, Chinese, German, French
-- Resizable inline AI chat panel
+1.  Obtain a Gemini API key from Google AI Studio.
+2.  Enter and save your API key in the inline chat panel on the site.
 
-### Files
+### 4-Layer Architecture
 
-```
-index.html      # Full portfolio — structure, style, logic, NODE_DATA
-knowledge.js    # RAG knowledge base — career, frameworks, philosophy
-README.md       # This file
-```
+| Layer | Content |
+|---|---|
+| Layer 1 — AS IS | Labels the market associates with Sakane (Security Specialist, Tech Risk Advisor, PM) |
+| Layer 2 — Hidden Substrate | 26 years of intellectual foundations invisible on a resume (Cognitive Science, Physics, Behavioral Economics, History) |
+| Layer 3 — Transformation Engine | THE VOID (perceptual gap) and the 3 structural contradictions it generates, plus resolution mechanisms (EMVIS, CCBR, ESI) |
+| Layer 4 — TO BE | Target identity (Structural Architect, Chief Decision Architect, Sovereign Venture Partner) |
 
----
+### Proprietary Frameworks
+
+  - EMVIS: AI-driven decision intelligence OS eliminating Japan's PoC Trap.
+  - CCBR: Next-generation cybersecurity theory inspired by Cosmic Microwave Background Radiation.
+  - ESI: Cognitive architecture framework for redesigning the decision-making OS.
+
+### File Structure
+
+structural-intelligence/
+├── index.html (Main page, i18n and chat UI integrated)
+├── knowledge.js (RAG knowledge base)
+└── README.md (This file)
+
+### Tech Stack
+
+  - Vanilla HTML, CSS, JavaScript
+  - Gemini API for AI chat
+  - Static RAG via keyword and tag matching against knowledge.js
+  - Google Fonts: Syne and Noto Sans JP
+
+### Author / Contact
+ 
+**Yasuyuki Sakane (坂根 康之)**
+Independent Strategic Architect & Venture Partner, Tokyo
+ 
+[sakane.dev](https://sakane.dev) · [en.sakane.dev](https://en.sakane.dev) · [cv.sakane.dev](https://cv.sakane.dev) · [LinkedIn](https://linkedin.com/in/yasuyukis) · [SoundCloud](https://soundcloud.com/yasuyuki-sakane)
+ 
+> *"From 2026, Pandora's Box opens."*
+
+-----
 
 ## 日本語
 
-### これは何か
+### 概要
+
+これは何か？  
 
 これは履歴書ではありません。26年間、外から見えていなかった部分を初めて形にしたものです。
-
 核心は、4層構造のインタラクティブな構造マップです。
 
-| レイヤー | ラベル | 意味 |
-|---|---|---|
-| 1 | AS IS | 市場が坂根を見るときのラベル — セキュリティスペシャリスト、リスクアドバイザー、PM |
-| 2 | Hidden Substrate | 外から見えていなかった知的基盤 — 認知科学、物理学、歴史学、行動経済学、26年の深層技術 |
-| 3 | Transformation Engine | THE VOID（認識の断絶）と、それが生む構造的矛盾 |
-| 4 | To Be | 断絶を解消した先に現れる姿 — Structural Architect、Chief Decision Architect、CSVFO |
+### 主な機能
 
-各ノードをクリックすると、過去・現在・未来のタイムラインと、他ノードとの因果関係が展開します。
+  - インタラクティブSVGマップ — 13ノードをクリックして各要素の意味、相関、タイムラインを探索できます。
+  - 言語切り替え — 右上ボタンで日本語と英語などを即時に切り替えます。設定はブラウザに保存されます。
+  - AIチャットアシスタント — Gemini APIを使用した、坂根康之に関するQ\&Aチャットボットです。
+  - 静的RAG — EMVIS、CCBR、ESIなどの詳細情報をナレッジベースから動的に検索して回答します。
+  - レスポンシブデザイン — モバイルおよびデスクトップ環境に対応しています。
 
-RAG搭載のAIアシスタント（Gemini API）が、坂根の経歴・フレームワーク・思想に関する質問に、ナレッジベースに基づいて回答します。
+### AIアシスタント機能とAPIキーについて
 
-### フレームワーク
+本ポートフォリオには、私の経歴や思想の背景を自然言語で深く探索できる、RAGベースのAIアシスタントを組み込んでいます。
+この対話機能をご利用いただくには、ご自身のGoogle Gemini APIキーが必要です。無料枠のAPIキーで動作します。
 
-- **構造知性（Structural Intelligence）** — 組織の機能不全の背後にある因果構造を読み、再設計する方法論
-- **EMVIS** — 日本市場進出のPoC地獄を解消するAI駆動型アーキテクチャ
-- **CCBR** — 宇宙背景放射理論を援用したサイバーセキュリティ次世代フレームワーク
-- **ESI** — 非線形時代における構造的意思決定のための拡張認知アーキテクチャ
-- **CSVFO** — 既存のCxOがカバーしない構造的空白地帯を埋める概念的役職
+プライバシーとセキュリティについての宣誓：
+入力されたAPIキーは、お使いのブラウザのローカルストレージにのみ保存されます。クライアントサイドから直接Google Gemini APIを呼び出すためのみに使用され、私を含む外部のサーバーやデータベースにキーや対話履歴が送信、保存されることは一切ありません。
 
-### 技術
+なお、APIキーの入力をスキップした場合でも、構造マップの探索や全コンテンツの閲覧など、基本機能はすべて制限なくご利用いただけます。
 
-- バニラHTML/CSS/JS — 単一ファイル、依存関係ゼロ、ビルド不要
-- RAG実装：キーワードベースのセマンティック検索（`knowledge.js`）+ Gemini API
-- 5言語対応：日本語・英語・中文・ドイツ語・フランス語
-- リサイズ可能なインラインAIチャットパネル
+セットアップ手順：
+
+1.  Google AI StudioでGemini APIキーを取得します。
+2.  サイトのインラインチャットパネルにAPIキーを入力して保存します。
+
+### 4層アーキテクチャ
+
+| Layer | 内容 |
+|---|---|
+| Layer 1 — AS IS | 市場が認識している坂根のラベル（Security Specialist、Tech Risk Advisor、PM） |
+| Layer 2 — Hidden Substrate | 履歴書には現れない26年間の知的基盤（認知科学、物理学、行動経済学、歴史学） |
+| Layer 3 — Transformation Engine | THE VOID（認識の断絶）とそれが生む3つの構造的矛盾、および解消メカニズム（EMVIS、CCBR、ESI） |
+| Layer 4 — TO BE | 向かうべき姿（Structural Architect、Chief Decision Architect、Sovereign Venture Partner） |
+
+### 独自フレームワーク
+
+  - EMVIS: 日本市場のPoC地獄を解消するAI駆動型意思決定OSです。
+  - CCBR: 宇宙背景放射のアナロジーによる次世代サイバーセキュリティ理論です。
+  - ESI: 意思決定OSを再設計する認知アーキテクチャフレームワークです。
 
 ### ファイル構成
 
-```
-index.html      # ポートフォリオ本体 — 構造・スタイル・ロジック・NODE_DATA
-knowledge.js    # RAGナレッジベース — 経歴・フレームワーク・思想
-README.md       # このファイル
-```
+structural-intelligence/
+├── index.html (メインページ、i18nおよびチャットUI統合)
+├── knowledge.js (RAGナレッジベース、坂根康之の情報チャンク)
+└── README.md (このファイル)
 
----
-
-## Author
-
+### 著者 / お問い合わせ
+ 
 **Yasuyuki Sakane (坂根 康之)**
 Independent Strategic Architect & Venture Partner, Tokyo
-
+ 
 [sakane.dev](https://sakane.dev) · [en.sakane.dev](https://en.sakane.dev) · [cv.sakane.dev](https://cv.sakane.dev) · [LinkedIn](https://linkedin.com/in/yasuyukis) · [SoundCloud](https://soundcloud.com/yasuyuki-sakane)
-
+ 
 > *"From 2026, Pandora's Box opens."*
+
+-----
+
+© 2026 Yasuyuki Sakane. All rights reserved.
