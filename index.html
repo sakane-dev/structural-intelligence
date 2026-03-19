@@ -177,6 +177,17 @@
         .chat-send:hover{transform:scale(1.1);}
         .chat-send:disabled{opacity:.5;cursor:not-allowed;transform:none;}
 
+        /* ── API KEY BAR (inline, always visible) ── */
+        #apikey-bar{padding:7px 14px;border-top:1px solid rgba(56,189,248,.1);display:flex;gap:6px;align-items:center;background:rgba(0,0,0,.12);}
+        #apikey-bar-input{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(56,189,248,.18);border-radius:20px;padding:5px 12px;color:var(--white);font-size:.74em;font-family:'Noto Sans JP',sans-serif;outline:none;transition:border-color .2s;}
+        #apikey-bar-input:focus{border-color:var(--cyan2);}
+        #apikey-bar-input::placeholder{color:var(--gray);}
+        #apikey-bar-input.saved{border-color:rgba(0,255,136,.4);}
+        #apikey-bar-save{padding:4px 11px;background:linear-gradient(135deg,var(--cyan2),var(--green2));border:none;border-radius:20px;color:#000;font-size:.7em;font-weight:700;cursor:pointer;white-space:nowrap;font-family:'Syne',sans-serif;transition:opacity .2s;flex-shrink:0;}
+        #apikey-bar-save:hover{opacity:.85;}
+        #apikey-bar-status{font-size:.68em;color:var(--green2);white-space:nowrap;flex-shrink:0;opacity:0;transition:opacity .3s;}
+        #apikey-bar-status.visible{opacity:1;}
+
         /* ── API KEY MODAL ── */
         #apikey-modal{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:3000;display:flex;align-items:center;justify-content:center;padding:20px;}
         #apikey-modal.hidden{display:none;}
@@ -244,6 +255,14 @@
         <div id="chat-resize-handle" title="ドラッグして高さを変更"></div>
         <!-- Suggestions -->
         <div class="chat-suggestions" id="chat-suggestions"></div>
+        <!-- API Key bar (always visible) -->
+        <div id="apikey-bar">
+            <input id="apikey-bar-input" type="password" placeholder="Gemini API Key (AIza...)" autocomplete="off"/>
+            <button id="apikey-bar-save" onclick="saveApiKeyBar()">
+                <span data-ja="保存" data-en="Save" data-zh="保存" data-de="Speichern" data-fr="Enregistrer">保存</span>
+            </button>
+            <span id="apikey-bar-status">✓ saved</span>
+        </div>
         <!-- Input -->
         <div class="chat-input-area">
             <input class="chat-input" id="chat-input" type="text" autocomplete="off" onkeydown="handleChatKey(event)"/>
@@ -1183,6 +1202,37 @@ async function sendChat() {
 }
 
 // ─────────────────────────────────────────────
+// API KEY BAR
+// ─────────────────────────────────────────────
+function saveApiKeyBar() {
+  const input = document.getElementById('apikey-bar-input');
+  const key = input.value.trim();
+  if (!key) return;
+  geminiApiKey = key;
+  localStorage.setItem('sakane_gemini_key', key);
+  input.classList.add('saved');
+  const status = document.getElementById('apikey-bar-status');
+  status.classList.add('visible');
+  setTimeout(() => status.classList.remove('visible'), 2000);
+  if (chatHistory.length === 0) initChat();
+}
+
+function initApiKeyBar() {
+  const input = document.getElementById('apikey-bar-input');
+  if (!input) return;
+  if (geminiApiKey) {
+    input.value = geminiApiKey.slice(0, 4) + '••••••••••••';
+    input.classList.add('saved');
+  }
+  input.addEventListener('focus', () => {
+    if (geminiApiKey) { input.value = ''; input.classList.remove('saved'); }
+  });
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') saveApiKeyBar();
+  });
+}
+
+// ─────────────────────────────────────────────
 // CHAT RESIZE
 // ─────────────────────────────────────────────
 function initChatResize() {
@@ -1245,12 +1295,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const inp = document.getElementById('chat-input');
   if (inp) inp.placeholder = CHAT_PLACEHOLDER[currentLang] || CHAT_PLACEHOLDER.ja;
   initChatResize();
-  // チャットを自動起動：APIキーがあればウェルカムメッセージ表示、なければモーダル
-  if (geminiApiKey) {
-    initChat();
-  } else {
-    showApiKeyModal();
-  }
+  initApiKeyBar();
+  initChat();
 });
 </script>
 
