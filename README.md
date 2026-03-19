@@ -21,9 +21,8 @@ Live: [pages.sakane.dev/structural-intelligence](https://pages.sakane.dev/struct
 This portfolio incorporates a RAG-based AI assistant that allows you to deeply explore the background of my career and philosophy using natural language.
 To use this interactive feature, you will need your own Google Gemini API key. It works seamlessly with the free tier API key.
 
-Privacy and Security:
-The API key you enter is stored exclusively in your browser's local storage. It is used solely to call the Google Gemini API directly from the client side. Neither the key nor your conversation history is ever transmitted to or stored on any external servers or databases, including mine.
-
+Privacy and Security Declaration:
+The entered API key is stored exclusively in your browser's local storage. It is used solely to call the Google Gemini API directly from the client side. Neither the key nor your conversation history is ever transmitted to or stored on this portfolio's servers or databases. Please note that if you are using the free tier of the Google Gemini API, your conversation data may be used by Google to improve their services, in accordance with Google's Terms of Service.
 If you choose to skip entering an API key, you can still access all core features, including the structural map and all content, without any restrictions.
 
 Setup Instructions:
@@ -96,9 +95,8 @@ Live: [pages.sakane.dev/structural-intelligence](https://pages.sakane.dev/struct
 この対話機能をご利用いただくには、ご自身のGoogle Gemini APIキーが必要です。無料枠のAPIキーで動作します。
 
 プライバシーとセキュリティについての宣誓：
-入力されたAPIキーは、お使いのブラウザのローカルストレージにのみ保存されます。クライアントサイドから直接Google Gemini APIを呼び出すためのみに使用され、私を含む外部のサーバーやデータベースにキーや対話履歴が送信、保存されることは一切ありません。
-
-なお、APIキーの入力をスキップした場合でも、構造マップの探索や全コンテンツの閲覧など、基本機能はすべて制限なくご利用いただけます。
+入力されたAPIキーは、お使いのブラウザのローカルストレージにのみ保存されます。クライアントサイドから直接Google Gemini APIを呼び出すためのみに使用され、本ポートフォリオのサーバーやデータベースにキーや対話履歴が送信、保存されることは一切ありません。なお、Google Gemini APIの無料枠をご利用の場合、対話データがGoogleのサービス改善に使用される可能性があります（Google利用規約に準じます）。
+また、APIキーの入力をスキップした場合でも、構造マップの探索や全コンテンツの閲覧など、基本機能はすべて制限なくご利用いただけます。
 
 セットアップ手順：
 
