@@ -4,7 +4,9 @@
 
 ### Overview
 
-A multilingual interactive portfolio that visualizes the cognitive architecture, intellectual foundations, and original frameworks developed over 26 years — and the structural gap between how the world perceives this work and what it actually is.
+A multilingual interactive portfolio that visualizes the cognitive architecture, intellectual foundations, and original frameworks developed over 26 years — and the structural gap between how the world perceives this work and what it actually is.  
+
+Live: [pages.sakane.dev/structural-intelligence](https://pages.sakane.dev/structural-intelligence)
 
 ### Key Features
 
@@ -76,7 +78,9 @@ Independent Strategic Architect & Venture Partner, Tokyo
 これは何か？  
 
 これは履歴書ではありません。26年間、外から見えていなかった部分を初めて形にしたものです。
-核心は、4層構造のインタラクティブな構造マップです。
+核心は、4層構造のインタラクティブな構造マップです。  
+
+Live: [pages.sakane.dev/structural-intelligence](https://pages.sakane.dev/structural-intelligence)
 
 ### 主な機能
 
